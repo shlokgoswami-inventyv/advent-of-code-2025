@@ -31,9 +31,10 @@ int main() {
         vector<string> nums=split(a,'-');
         for(long long k=stoll(nums[0]);k<=stoll(nums[1]);k++){
             string num=to_string(k);
-            bool flag=true;
-            for(int i=0;i<num.size()/2;i++){
-                
+            string a=num.substr(0,(num.size())/2);
+            string b=num.substr(num.size()/2,num.size());
+            if(a==b){
+                sum=sum+k;
             }
         }
     }
